@@ -10,3 +10,6 @@ match fav_color:
         print(f"your favorite color is {fav_color}")
     case _:
         print(f"Your favorite color is not matched with our system")
+
+
+STYLEUPPERCASE = "Don't want to change"
