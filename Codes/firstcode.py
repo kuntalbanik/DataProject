@@ -13,3 +13,41 @@ match fav_color:
 
 
 STYLEUPPERCASE = "Don't want to change"
+
+
+"""
+ENUM:
+
+This is a very good data structure for creating choices
+"""
+from enum import Enum, auto
+
+
+class PizzaSize(Enum):
+    SMALL = 8
+    MEDIUM = 10
+    LARGE = 12
+
+
+choice = PizzaSize.MEDIUM
+print(f"One order for {choice.value} inch pizza")
+
+
+class Colors(Enum):
+    """T-Shirts Verieties"""
+
+    RED = "red"
+    BLUE = "blue"
+    GREEN = "green"
+
+
+print(f"One order for {Colors.GREEN.value} T-shirt")
+
+
+class Role(Enum):
+    ASSOCIATE = auto()  # Automatically set to 1
+    SUPERVISOR = auto()  # Automatically set to 2
+    MANAGER = auto()  # Automatically set to 3
+
+
+print(Role.SUPERVISOR.value)
